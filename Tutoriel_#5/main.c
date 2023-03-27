@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Trouver un nombre
+    // Exercice trouver un nombre
     int is_inside = 0;
     int arr_nombre[] = {123, 214, 545, 85, 0};
     int val = 0;
@@ -18,7 +18,7 @@ int main() {
         printf("Erreur\n");
     }
 
-    // Chercher un nombre
+    // Exercice afficher les éléments d'un tableau
     int arr[5];
 
     printf("Entre 5 nombres : ");
