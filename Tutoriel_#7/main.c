@@ -1,41 +1,24 @@
 #include <stdio.h>
 
-char to_uppercase(char c);
-char to_lowercase(char c);
-void print_square(int n1, int n2, char c);
+void call_return_max();
+int return_max(int arr[5], int size);
 
 int main() {
-    char string[] = "Bonjour, coMmeNt vAs Tu ?";
-
-    for (int i = 0; string[i] != '\0'; i++) {
-        printf("%c", to_uppercase(string[i]));
-    }
-    for (int i = 0; string[i] != '\0'; i++) {
-        printf("%c", to_lowercase(string[i]));
-    }
-    print_square(10, 10, 'B');
+    call_return_max();
     return 0;
 }
 
-char to_uppercase(char c) {
-    if (c >= 'a' && c <= 'z') {
-        return c -= 32;
-    }
-    return c;
-}
-
-char to_lowercase(char c) {
-    if (c >= 'A' && c <= 'Z') {
-        return c += 32;
-    }
-    return c;
-}
-
-void print_square(int n1, int n2, char c) {
-    for (int i = 0; i < n1; i++) {
-        for (int j = 0; j < n2; j++) {
-            printf("%c", c);
+int return_max(int arr[5], int size) {
+    int max = arr[0];
+    for (int i = 0; i < size; i++) {
+        if (max < arr[i]) {
+            max = arr[i];
         }
-        printf("\n");
     }
+    return max;
+}
+
+void call_return_max() {
+    int arr[5] = {-43, -324, -123155, -3, -6};
+    printf("max -> %d\n", return_max(arr, 5));
 }
